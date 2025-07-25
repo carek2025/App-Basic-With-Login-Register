@@ -9,24 +9,81 @@
     tools:context=".RegisterPage">
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
+        android:id="@+id/tel"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="88dp"
         android:backgroundTint="#90B8FF"
         android:ems="10"
         android:gravity="start"
-        android:hint="Email .."
+        android:hint="Telephone ...."
         android:inputType="text"
         android:paddingStart="15dp"
         android:textColor="#CAC5C5"
         android:textColorHint="#D380D7"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#90B8FF"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Name ...."
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="#CAC5C5"
+        android:textColorHint="#D380D7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#90B8FF"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Email ...."
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="#CAC5C5"
+        android:textColorHint="#D380D7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#90B8FF"
+        android:ems="10"
+        android:hint="Password .."
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="405dp"
+        tools:textColorHint="#D380D7" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#90B8FF"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Last Name ...."
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="#CAC5C5"
+        android:textColorHint="#D380D7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="216dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -45,22 +102,6 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
         tools:textColor="#90B8FF" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="105dp"
-        android:text="¿Olvidaste la contraseña?"
-        android:textColor="#42529B"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -82,31 +123,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/i5" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="235dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="88dp"
-        android:backgroundTint="#90B8FF"
-        android:ems="10"
-        android:hint="Password .."
-        android:inputType="textPassword"
-        android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:textColorHint="#D380D7" />
-
     <Button
         android:id="@+id/register"
         android:layout_width="156dp"
         android:layout_height="45dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginEnd="128dp"
         android:onClick="register"
         android:text="REGISTRARSE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        tools:layout_editor_absoluteY="532dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
