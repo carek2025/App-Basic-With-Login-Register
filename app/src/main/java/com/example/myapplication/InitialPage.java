@@ -73,7 +73,7 @@ public class InitialPage extends AppCompatActivity {
             DatosUsuario.password= password_u;
             Toast.makeText(this,"Modificacion de Datos Exitoso",Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(this,MainActivity.class);
+            Intent intent = new Intent(this,InitialPage.class);
             startActivity(intent);
         }
 

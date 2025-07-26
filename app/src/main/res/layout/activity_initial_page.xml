@@ -169,7 +169,7 @@
         android:layout_marginStart="127dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="128dp"
-        android:onClick="register"
+        android:onClick="ChangeData"
         android:text="EDITAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
