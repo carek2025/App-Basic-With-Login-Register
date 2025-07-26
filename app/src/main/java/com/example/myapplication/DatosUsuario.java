@@ -1,9 +1,10 @@
 package com.example.myapplication;
 
 public class DatosUsuario {
-    public static String nombre = "";
+    public static String name = "";
+    public static String lastname = "";
     public static String email = "";
-    public static String telefono = "";
-    public static String contraseña = "";
+    public static String tel = "";
+    public static String password = "";
 
 }

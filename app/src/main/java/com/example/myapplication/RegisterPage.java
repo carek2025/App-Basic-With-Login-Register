@@ -15,7 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class RegisterPage extends AppCompatActivity {
     private EditText name,lastname,tel,email,password;
-    private Button register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,39 +32,39 @@ public class RegisterPage extends AppCompatActivity {
         password=findViewById(R.id.password);
     }
     public void register(View v){
-        DatosUsuario.name_u= name.getText().toString().trim();
-        DatosUsuario.last_u= lastname.getText().toString().trim();
-        DatosUsuario.tel_u= tel.getText().toString().trim();
-        DatosUsuario.email_u= email.getText().toString().trim();
-        DatosUsuario.pass_u= password.getText().toString().trim();
+        DatosUsuario.name= name.getText().toString().trim();
+        DatosUsuario.lastname= lastname.getText().toString().trim();
+        DatosUsuario.tel= tel.getText().toString().trim();
+        DatosUsuario.email= email.getText().toString().trim();
+        DatosUsuario.password= password.getText().toString().trim();
 
-        Boolean fieldValid= true;
+        boolean fieldValid= true;
 
-        if(DatosUsuario.tel_u.isEmpty()){
+        if(DatosUsuario.tel.isEmpty()){
             tel.setError("¡¡FALTO RELLENAR TELEPHONE!!");
             fieldValid=false ;
         }
-        if(DatosUsuario.email_u.isEmpty()){
+        if(DatosUsuario.email.isEmpty()){
             tel.setError("¡¡FALTO RELLENAR EMAIL!!");
             fieldValid=false;
         }
-        if(DatosUsuario.name_u.isEmpty()){
+        if(DatosUsuario.name.isEmpty()){
             tel.setError("¡¡FALTO RELLENAR NAME!!");
             fieldValid=false;
         }
-        if(DatosUsuario.last_u.isEmpty()){
+        if(DatosUsuario.lastname.isEmpty()){
             tel.setError("¡¡FALTO RELLENAR LASTNAME!!");
             fieldValid=false;
         }
-        if(DatosUsuario.pass_u.isEmpty()){
+        if(DatosUsuario.password.isEmpty()){
             tel.setError("¡¡FALTO RELLENAR PASSWORD!!");
             fieldValid=false;
         }
-        if (fieldValid==true){
+        if (fieldValid){
 
             Toast.makeText(this,"Registro Exitoso",Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(this,InitialPage.class);
+            Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
             finish();
         }

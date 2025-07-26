@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     private EditText email,password;
-    private Button login,register;
-    private TextView output;
-    String email_u= "",pass_u= "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,36 +29,20 @@ public class MainActivity extends AppCompatActivity {
         });
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
-        output=findViewById(R.id.output);
     }
     public void login(View v){
         String email_log= email.getText().toString().trim();
         String pass_log= password.getText().toString().trim();
 
-        if(email_log.equals(email_u) && pass_log.equals(pass_u)){
-            output.setText("¡¡¡¡¡¡INICIO DE SESION EXITOSO!!!!!!");
-            email.setText("");
-            password.setText("");
+        if(email_log.equals(DatosUsuario.email) && pass_log.equals(DatosUsuario.password)){
+            Toast.makeText(this,"Inicio de Sesion Exitoso",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,InitialPage.class);
+            startActivity(intent);
+            finish();
         }else{
-            output.setText("¡¡¡¡¡¡CREDENCIALES INCORRECTAS!!!!!!");
-        }
-    }
-    public void register(View v){
-         email_u= email.getText().toString().trim();
-         pass_u= password.getText().toString().trim();
-
-        if ((!email_u.isEmpty()) && (!pass_u.isEmpty())){
-            output.setText("¡¡¡¡¡¡REGISTRADO CON EXITO!!!!!!");
+            Toast.makeText(this,"Credenciales Incorectas",Toast.LENGTH_SHORT).show();
             email.setText("");
             password.setText("");
-        } else if(!email_u.isEmpty()){
-            pass_u= "";
-            output.setText("!!!--REGISTRO INCORRECTO--¡¡¡\n-----FALTA LA CONTRASEÑA-----");
-        }else if(!pass_u.isEmpty()){
-            email_u= "";
-            output.setText("!!!--REGISTRO INCORRECTO--¡¡¡\n-----FALTA EL EMAIL-----");
         }
     }
-
-
 }
